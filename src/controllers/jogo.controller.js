@@ -6,6 +6,11 @@ class JogoController{
             const jogo = await JogoService.getAll();
             res.json(jogo);
         } catch(error){}
+    }async post(req,res){
+        try{
+            const jogo = await JogoService.create();
+            res.json(jogo);
+        } catch(error){}
     }
 
 }
